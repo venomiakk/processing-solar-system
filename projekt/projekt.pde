@@ -120,13 +120,17 @@ void draw() {
   float dirX = sin(ship.rotationAngleY);
   float dirY = -sin(ship.rotationAngleX);
   float dirZ = -cos(ship.rotationAngleY);
+ 
   //float dirX = cos(ship.rotationAngleX) * sin(ship.rotationAngleY);
   //float dirY = -sin(ship.rotationAngleX);
   //float dirZ = cos(ship.rotationAngleX) * -cos(ship.rotationY);
+  
+   //println(ship.rotationAngleX, ship.rotationAngleY, ship.rotationAngleY);
   if (cameraToggle) {
     // Pozycja kamery nad statkiem
     //camera(ship.position.x+100, ship.position.y-100, ship.position.z, ship.position.x-100, ship.position.y+100, ship.position.z, 1, 0, 0);
-    camera(ship.position.x+100, ship.position.y-100, ship.position.z, ship.position.x-100, ship.position.y+100, ship.position.z, dirX, dirY, dirZ);
+    //println(ship.position.x,ship.position.y,ship.position.z); 
+    camera(ship.position.x+100, ship.position.y-100, ship.position.z, ship.position.x-200, ship.position.y, ship.position.z, 0, 1,0);
   } else {
     // Standardowa pozycja kamery
     //camera(0, height / 2, (height / 2) / tan(PI/6), width / 2, height / 2, 0, 0, 1, 0);

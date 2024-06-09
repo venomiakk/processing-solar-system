@@ -71,8 +71,10 @@ class Spaceship {
     float dirX = cos(rotationAngleX) * sin(rotationAngleY);
     float dirY = -sin(rotationAngleX);
     float dirZ = cos(rotationAngleX) * -cos(rotationY);
-    spotLight(255, 0, 0, 0, 0, 0, dirX, dirY, dirZ, PI/2, 600);
-    println(dirX, dirY, dirZ);
+    
+    spotLight(255, 0, 0, position.x, position.y, position.z, dirX, dirY, dirZ, PI/2, 600);
+    //spotLight(255, 0, 0, 0, 0, 0, dirX, dirY, dirZ, PI/2, 600);
+    //println(dirX, dirY, dirZ);
     //translate(-100,0,0);
     //fill(0,0,255);
     //sphere(10);
