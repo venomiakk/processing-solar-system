@@ -4,7 +4,6 @@ Moon p1moon1, p1moon2, p2moon1, p2moon2, p3moon1, p3moon2, p4moon1;
 Spaceship ship;
 PShape earth_moon, shipShape, p3, earth;
 PImage suntxt;
-Ship player;
 boolean cameraToggle = false;
 float rotationX, rotationY;
 Planet[] planets;
@@ -130,7 +129,6 @@ void draw() {
 
   checkCollisions();
   if (gameOver) {
-    //resetMatrix();
     background(215);
     fill(255, 0, 0);
     textSize(32);
@@ -158,6 +156,11 @@ void mouseDragged() {
   ship.handleMouseDragged();
 }
 
+
+void mouseReleased() {
+  ship.handleMouseReleased();
+}
+
 void checkCollisions() {
   float distance = PVector.dist(ship.position, sun.position);
   if (distance < sun.radius + 10) {
@@ -169,9 +172,10 @@ void checkCollisions() {
       gameOver = true;
     }
   }
-  for (int i = 0; i < moons.length; i++){
+  for (int i = 0; i < moons.length; i++) {
     distance = PVector.dist(ship.position, moons[i].position);
     if (distance < moons[i].radius + 10) {
-    gameOver = true;}
+      gameOver = true;
+    }
   }
 }
