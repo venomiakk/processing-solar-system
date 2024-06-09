@@ -157,7 +157,7 @@ class Planet {
     this.emiG = emiG;
     this.emiB = emiB;
   }
-  void setAmient(float ambR, float ambG, float ambB) {
+  void setAmbient(float ambR, float ambG, float ambB) {
     this.ambR = ambR;
     this.ambG = ambG;
     this.ambB = ambB;

@@ -123,7 +123,7 @@ class Moon {
     this.emiG = emiG;
     this.emiB = emiB;
   }
-  void setAmient(float ambR, float ambG, float ambB) {
+  void setAmbient(float ambR, float ambG, float ambB) {
     this.ambR = ambR;
     this.ambG = ambG;
     this.ambB = ambB;
@@ -134,4 +134,5 @@ class Moon {
     this.specG = specG;
     this.specB = specB;
   }
+  
 }

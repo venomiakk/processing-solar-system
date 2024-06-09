@@ -26,7 +26,7 @@ Dodatkowo wprowadź własną interakcję do projektu, która w ciekawy sposób g
 
   - [x] użycie wszystkich prymitywów 3D (sfera i sześcian) razem z ich modyfikacją (np. prostopadłościan) dla ciał niebieskich,
   - [x] zaimportowanie co najmniej 1 obiektu 3D z pliku zewnętrznego dla ciał niebieskich,
-  - [ ] zbudowanie statku kosmicznego z co najmniej 2 prymitywów 3D lub zaimportowanie obiektu 3D z pliku zewnętrznego.
+  - [x] zbudowanie statku kosmicznego z co najmniej 2 prymitywów 3D lub zaimportowanie obiektu 3D z pliku zewnętrznego.
 
 - Zdefiniowanie wyglądu obiektów 3D:
 
@@ -42,11 +42,11 @@ Dodatkowo wprowadź własną interakcję do projektu, która w ciekawy sposób g
 
 - Zdefiniowanie 2 trybów oglądania układu planetarnego:
 
-  - [ ] widok ogólny z boku, gdzie można obserwować działanie całego układu planetarnego,
-  - [ ] widok z perspektywy statku kosmicznego, gdzie razem z ruchem statku zmienia się to, co widzimy.
+  - [x] widok ogólny z boku, gdzie można obserwować działanie całego układu planetarnego,
+  - [x] widok z perspektywy statku kosmicznego, gdzie razem z ruchem statku zmienia się to, co widzimy.
 
 - Dodanie interakcji do projektu:
 
-  - [ ] przełączanie się pomiędzy 2 trybami oglądania układu planetarnego, np. poprzez wciśnięcie wybranego klawisza na klawiaturze,
-  - [ ] poruszanie się i obracanie statkiem kosmicznym przy wykorzystaniu klawiatury i myszki,
-  - [ ] własny pomysł, który w ciekawy sposób rozwinie zrealizowane wymagania, np. możliwość strzelania ze statku kosmicznego czy "umieranie", kiedy statek kosmiczny zderzy się z planetą.
+  - [x] przełączanie się pomiędzy 2 trybami oglądania układu planetarnego, np. poprzez wciśnięcie wybranego klawisza na klawiaturze,
+  - [x] poruszanie się i obracanie statkiem kosmicznym przy wykorzystaniu klawiatury i myszki,
+  - [x] własny pomysł, który w ciekawy sposób rozwinie zrealizowane wymagania, np. możliwość strzelania ze statku kosmicznego czy "umieranie", kiedy statek kosmiczny zderzy się z planetą.

@@ -7,6 +7,7 @@ class Spaceship {
   float rotationAngleY; // Rotacja wokół osi Y
   float rotationAngleX; // Rotacja wokół osi X
   float scale;
+  float rotationY = 0, rotationX = 0;
 
   boolean forward, backward, left, right, up, down, rotateLeft, rotateRight;
 
@@ -25,24 +26,16 @@ class Spaceship {
     acceleration.set(0, 0, 0);
 
     if (forward) {
-      PVector forwardAccel = PVector.fromAngle(rotationAngleY);
-      forwardAccel.mult(0.1);
-      acceleration.add(forwardAccel);
+      acceleration.add(0, 0, -0.1);
     }
     if (backward) {
-      PVector backwardAccel = PVector.fromAngle(rotationAngleY);
-      backwardAccel.mult(-0.1);
-      acceleration.add(backwardAccel);
+      acceleration.add(0, 0, 0.1);
     }
     if (left) {
-      PVector leftAccel = PVector.fromAngle(rotationAngleY - HALF_PI);
-      leftAccel.mult(0.1);
-      acceleration.add(leftAccel);
+      acceleration.add(-0.1, 0, 0);
     }
     if (right) {
-      PVector rightAccel = PVector.fromAngle(rotationAngleY + HALF_PI);
-      rightAccel.mult(0.1);
-      acceleration.add(rightAccel);
+      acceleration.add(0.1, 0, 0);
     }
     if (up) {
       acceleration.add(0, -0.1, 0);
@@ -55,13 +48,14 @@ class Spaceship {
     velocity.limit(maxSpeed);
     position.add(velocity);
 
-    if (rotateLeft) {
-      rotationAngleY -= 0.05;
-    }
-    if (rotateRight) {
-      rotationAngleY += 0.05;
-    }
-
+    //if (rotateLeft) {
+    //  rotationAngleY -= 0.05;
+    //}
+    //if (rotateRight) {
+    //  rotationAngleY += 0.05;
+    //}
+    rotationAngleY += rotationY;
+    rotationAngleX += rotationX;
     velocity.mult(0.99); // Damping to slow down gradually
   }
 
@@ -70,14 +64,14 @@ class Spaceship {
     translate(position.x, position.y, position.z);
     rotateZ(PI);
     rotateY(rotationAngleY);
+    rotateX(rotationAngleX);
     scale(scale);
     shape(shape);
     translate(0, 2, 5);
     //light
-    spotLight(255,255,200, position.x, position.y, position.z, 1, 0, 0, PI/2, 600);
+    //spotLight(255,255,200, position.x, position.y, position.z, 1, 0, 0, PI/2, 600);
     //sphere(1);
     popMatrix();
-    
   }
 
   void handleKeyPress(char key) {
@@ -132,5 +126,11 @@ class Spaceship {
     if (key == 'x' || key == 'X') {
       down = false;
     }
+  }
+
+  void handleMouseDragged() {
+    // Obracanie widoku za pomocą myszki
+    rotationY += (mouseX - pmouseX) * 0.001;
+    rotationX -= (mouseY - pmouseY) * 0.001;
   }
 }
